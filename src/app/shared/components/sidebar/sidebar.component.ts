@@ -1,10 +1,18 @@
 import { CommonModule } from '@angular/common';
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { Component } from '@angular/core';
+import { GifsService } from 'src/app/gifs/service/gifs.service';
 
 @Component({
   selector: 'shared-sidebar',
   templateUrl: './sidebar.component.html',
   styleUrls: ['./sidebar.component.css'],
-  changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class SidebarComponent { }
+export class SidebarComponent {
+
+  constructor( private gifsService: GifsService) { }
+
+  get tags(){
+    return this.gifsService.tagsHistory;
+  }
+
+ }
