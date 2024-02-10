@@ -4,9 +4,7 @@ import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'gifs-card-list',
-  standalone: true,
   templateUrl: './card-list.component.html',
-  imports: [CommonModule]
 })
 export class CardListComponent {
 
